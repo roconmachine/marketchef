@@ -13,7 +13,7 @@ import rx.Observer;
 import rx.Subscription;
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
-import com.roconmachine.app.marketchef.BoilerplateApplication;
+import com.roconmachine.app.marketchef.MarketChefApplication;
 import com.roconmachine.app.marketchef.data.model.Ribot;
 import com.roconmachine.app.marketchef.util.AndroidComponentUtil;
 import com.roconmachine.app.marketchef.util.NetworkUtil;
@@ -34,7 +34,7 @@ public class SyncService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        BoilerplateApplication.get(this).getComponent().inject(this);
+        MarketChefApplication.get(this).getComponent().inject(this);
     }
 
     @Override

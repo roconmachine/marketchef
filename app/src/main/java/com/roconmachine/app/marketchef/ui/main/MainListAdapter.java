@@ -36,7 +36,14 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
     public void setData(List<SearchedItem> searchedItems){
         items = searchedItems;
     }
+    public List<SearchedItem> getItems()
+    {
+        return this.items;
+    }
 
+    public SearchedItem getItem(int position){
+        return this.getItems().get(position);
+    }
     @Override
     public MainListAdapterHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())

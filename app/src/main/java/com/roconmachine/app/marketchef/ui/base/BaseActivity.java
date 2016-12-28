@@ -1,5 +1,6 @@
 package com.roconmachine.app.marketchef.ui.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -8,7 +9,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 import timber.log.Timber;
-import com.roconmachine.app.marketchef.BoilerplateApplication;
+import com.roconmachine.app.marketchef.MarketChefApplication;
 import com.roconmachine.app.marketchef.injection.component.ActivityComponent;
 import com.roconmachine.app.marketchef.injection.component.ConfigPersistentComponent;
 import com.roconmachine.app.marketchef.injection.component.DaggerConfigPersistentComponent;
@@ -40,7 +41,7 @@ public class BaseActivity extends AppCompatActivity {
         if (!sComponentsMap.containsKey(mActivityId)) {
             Timber.i("Creating new ConfigPersistentComponent id=%d", mActivityId);
             configPersistentComponent = DaggerConfigPersistentComponent.builder()
-                    .applicationComponent(BoilerplateApplication.get(this).getComponent())
+                    .applicationComponent(MarketChefApplication.get(this).getComponent())
                     .build();
             sComponentsMap.put(mActivityId, configPersistentComponent);
         } else {
@@ -67,6 +68,24 @@ public class BaseActivity extends AppCompatActivity {
 
     public ActivityComponent activityComponent() {
         return mActivityComponent;
+    }
+
+    protected void startMarketChefActivity(Intent intent, Map<String, String> objectMap){
+        Bundle bundle = new Bundle();
+
+        for (Map.Entry<String, String> entry : objectMap.entrySet())
+        {
+            bundle.putString(entry.getKey(), entry.getValue());
+        }
+
+        startActivity(intent.putExtras(bundle));
+    }
+
+    void showError(String title, String error) throws Exception{
+
+    }
+    void showInfo(String title, String body) throws Exception{
+
     }
 
 }

@@ -2,10 +2,12 @@ package com.roconmachine.app.marketchef.data.model;
 
 import android.graphics.drawable.Drawable;
 
+import java.io.Serializable;
+
 /**
  * Created by asus on 12/26/2016.
  */
-public class SearchedItem {
+public class SearchedItem{
     private Drawable thumb;
     private String title, price, description;
 
