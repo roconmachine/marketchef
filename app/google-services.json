@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1083992678531",
+    "firebase_url": "https://marketchef-e821d.firebaseio.com",
+    "project_id": "marketchef-e821d",
+    "storage_bucket": "marketchef-e821d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083992678531:android:87c66cdf74d65769",
+        "android_client_info": {
+          "package_name": "com.roconmachine.app.marketchef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083992678531-c7p0jl2svk3jb498e6h7dqg70rv2mcba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.roconmachine.app.marketchef",
+            "certificate_hash": "ED4076E30C5640EAF8FF03A913F3213DACBC499B"
+          }
+        },
+        {
+          "client_id": "1083992678531-ne0o20ohfmtit7u69vhjs5k1vs6vc8ip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmtq1Z1Uylb5Xlnk7w_CRJd6oJ4ez5obI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083992678531-ne0o20ohfmtit7u69vhjs5k1vs6vc8ip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
