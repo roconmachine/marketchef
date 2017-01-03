@@ -72,11 +72,11 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void startMarketChefActivity(Intent intent, Map<String, String> objectMap){
         Bundle bundle = new Bundle();
-
-        for (Map.Entry<String, String> entry : objectMap.entrySet())
-        {
-            bundle.putString(entry.getKey(), entry.getValue());
-        }
+        if (objectMap != null)
+            for (Map.Entry<String, String> entry : objectMap.entrySet())
+            {
+                bundle.putString(entry.getKey(), entry.getValue());
+            }
 
         startActivity(intent.putExtras(bundle));
     }

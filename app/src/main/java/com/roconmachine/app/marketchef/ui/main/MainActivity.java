@@ -63,11 +63,11 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                SearchedItem searchedItem = mainListAdapter.getItem(position);
-                String json = MyGson.getInstance().objectToJson(searchedItem);
-                Map<String, String> stringMap = new HashMap<String, String>();
-                stringMap.put("details", json);
-                startMarketChefActivity(new Intent(MainActivity.this, DetailsActivity.class), stringMap);
+                //SearchedItem searchedItem = mainListAdapter.getItem(position);
+                //String json = MyGson.getInstance().objectToJson(searchedItem);
+                //Map<String, String> stringMap = new HashMap<String, String>();
+                //stringMap.put("details", json);
+                startMarketChefActivity(new Intent(MainActivity.this, DetailsActivity.class), null);
                 //Toast.makeText(getApplicationContext(), "clicked position " + position , Toast.LENGTH_LONG).show();
             }
         }));

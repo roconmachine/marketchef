@@ -21,7 +21,7 @@ public class DetailsActivity extends BaseActivity implements DetailsMvpView {
         setContentView(R.layout.details);
         ButterKnife.bind(this);
 
-        
+
     }
     @Override
     public void showError(String title, String error) throws Exception {

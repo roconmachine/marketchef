@@ -10,6 +10,8 @@ import java.io.Serializable;
 public class SearchedItem{
     private Drawable thumb;
     private String title, price, description;
+    private String detailPageLink;
+
 
     public Drawable getThumb() {
         return thumb;
