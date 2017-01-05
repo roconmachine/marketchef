@@ -8,7 +8,8 @@ import java.io.Serializable;
  * Created by asus on 12/26/2016.
  */
 public class SearchedItem{
-    private Drawable thumb;
+    public static final String KEY = "search-item";
+    private transient Drawable thumb;
     private String title, price, description;
     private String detailPageLink;
 
